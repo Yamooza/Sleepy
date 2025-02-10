@@ -109,9 +109,9 @@ TextureImporter:
       name: "\xF6rkki_0"
       rect:
         serializedVersion: 2
-        x: 92
+        x: 154
         y: 2138
-        width: 1800
+        width: 1831
         height: 1707
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -184,10 +184,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      "\xF6rkki_0": -625105163838144751
-      "\xF6rkki_1": -4105075424012475875
-      "\xF6rkki_2": 4392880922930488024
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

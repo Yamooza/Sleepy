@@ -16,7 +16,6 @@ public class Movement : MonoBehaviour
     public AudioSource src;
     public AudioClip sfx1;
 
-
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -59,15 +58,16 @@ public class Movement : MonoBehaviour
         {
             // Set the scale on the X-axis to -1
             Vector3 scale = transform.localScale;
-            scale.x = -1;
+            scale.x = -0.1f;
             transform.localScale = scale;
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
             // Set the scale on the X-axis to 1
             Vector3 scale = transform.localScale;
-            scale.x = 1;
+            scale.x = 0.1f;
             transform.localScale = scale;
         }
-    }
+
+   }
 }
