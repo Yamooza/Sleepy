@@ -6,7 +6,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     // Movement speed of the player
-    public float MovementSpeed = 1;
+   [SerializeField] public float MovementSpeed = 1;
     private Rigidbody2D _rigidbody;
     public float jumpForce;
     public GameObject GameObject;
