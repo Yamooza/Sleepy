@@ -13,6 +13,8 @@ public class Movement : MonoBehaviour
     public float jumpsAmount;
     public GameObject Player;
 
+    public Animator animator;
+
     public AudioSource src;
     public AudioClip sfx1;
 
@@ -31,14 +33,14 @@ public class Movement : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void Update()
+    void Update()
     {
         {
         }
-
         // Get horizontal movement input
         var movement = Input.GetAxis("Horizontal");
         transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
+        animator.SetFloat("Speed", Mathf.Abs(movement));
 
         // Jump logic
         if (Input.GetKeyDown(KeyCode.W))
@@ -60,6 +62,7 @@ public class Movement : MonoBehaviour
             Vector3 scale = transform.localScale;
             scale.x = -0.1f;
             transform.localScale = scale;
+
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
@@ -68,6 +71,5 @@ public class Movement : MonoBehaviour
             scale.x = 0.1f;
             transform.localScale = scale;
         }
-
-   }
+    }
 }
