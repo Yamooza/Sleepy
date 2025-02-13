@@ -699,7 +699,7 @@ Transform:
   m_GameObject: {fileID: 240480186}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 46.9549, y: -11.4475, z: 0}
+  m_LocalPosition: {x: 46.9549, y: -9.8, z: 0}
   m_LocalScale: {x: 137.12614, y: 0.385, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1882,8 +1882,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MovementSpeed: 5
+  DashSpeed: 5
+  DashCoolDown: 5
+  dashTime: 0.3
   _rigidbody: {fileID: 928854149}
-  jumpForce: 5
+  jumpForce: 300
   GameObject: {fileID: 928854144}
   jumpsAmount: 2
   Player: {fileID: 928854144}
@@ -2130,8 +2133,8 @@ Transform:
   m_GameObject: {fileID: 931684684}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 47.900005, y: -2.13, z: 0}
-  m_LocalScale: {x: 1.2499416, y: 1.2499416, z: 1.2499416}
+  m_LocalPosition: {x: 47.8997, y: 0.39999998, z: 0}
+  m_LocalScale: {x: 1.38284, y: 1.38284, z: 1.38284}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2217,8 +2220,8 @@ Transform:
   m_GameObject: {fileID: 1022151282}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.500006, y: -2.13, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalPosition: {x: 5.4198, y: 0.4, z: 0}
+  m_LocalScale: {x: 5.531618, y: 5.531618, z: 5.531618}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2609,7 +2612,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1184229073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4317,8 +4320,8 @@ Transform:
   m_GameObject: {fileID: 1899850137}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 86.3, y: -2.13, z: 0}
-  m_LocalScale: {x: 1.2499416, y: 1.2499416, z: 1.2499416}
+  m_LocalPosition: {x: 90.3797, y: 0.39999998, z: 0}
+  m_LocalScale: {x: 1.38284, y: 1.38284, z: 1.38284}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
