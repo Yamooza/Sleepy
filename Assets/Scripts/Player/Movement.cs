@@ -19,6 +19,7 @@ public class Movement : MonoBehaviour
 
 
     bool dashOnCD = false;
+    bool lookingRight = true;
     bool dashing = false;
     public Animator animator;
     Vector2 movement;
@@ -51,7 +52,11 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && !dashOnCD)
         {
-            _rigidbody.AddForce(transform.right * DashSpeed, ForceMode2D.Impulse);
+            if (lookingRight)
+                _rigidbody.AddForce(transform.right * DashSpeed, ForceMode2D.Impulse);
+
+            if (!lookingRight)
+                _rigidbody.AddForce(transform.right * -1 * DashSpeed, ForceMode2D.Impulse);
             animator.SetFloat("Speed", Mathf.Abs(movement.x * DashSpeed));
             StartCoroutine(IsDashing());
             StartCoroutine(ResetDash());
@@ -96,6 +101,7 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A))
         {
             // Set the scale on the X-axis to -1
+            lookingRight = false;
             Vector3 scale = transform.localScale;
             scale.x = -0.1f;
             transform.localScale = scale;
@@ -105,6 +111,7 @@ public class Movement : MonoBehaviour
         {
             // Set the scale on the X-axis to 1
             Vector3 scale = transform.localScale;
+            lookingRight = true;
             scale.x = 0.1f;
             transform.localScale = scale;
         }
