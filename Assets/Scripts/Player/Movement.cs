@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour
 {
     // Movement speed of the player
    [SerializeField] private float MovementSpeed = 1;
-     public Rigidbody2D _rigidbody;
+     public  Rigidbody2D _rigidbody;
     [SerializeField] private float jumpForce;
     [SerializeField] private GameObject GameObject;
     [SerializeField] private float jumpsAmount;
